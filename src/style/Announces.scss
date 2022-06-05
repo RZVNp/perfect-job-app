@@ -1,0 +1,193 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.5rem;
+  .box {
+    width: 70%;
+    background: #e0f2fe;
+    height: 65px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    .filter {
+      border-right: 2px solid #1e2139;
+      color: #1e2139;
+      position: relative;
+      cursor: pointer;
+      font-size: 15px;
+    .filterStart {
+      padding: 7px;
+    }
+      .fas {
+        position: absolute;
+        top: 15px;
+        right: 5px;
+        font-size: 15px;
+        color: #1e2139;
+        cursor: pointer;
+      }
+      .filter-menu {
+        position: absolute;
+        top: 60px;
+        left: -10px;
+        background: #e0f2fe;
+        border-radius: 5px;
+        padding: 20px;
+        color: #1e2139;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        li {
+          padding-bottom: 20px;
+        }
+
+        li:last-child {
+          padding-bottom: 0;
+        }
+
+        li:hover {
+          color: #6f768d;
+        }
+      }
+    }
+    .search {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 38px;
+        outline: none;
+        color: #1e2139;
+        background: #e0f2fe;
+      }
+      ::placeholder {
+        color: #1e2139;
+        opacity: 0.8;
+      }
+      .fas {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 22px;
+        color: #1e2139;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.dataLoaded {
+  width: 100%;
+  max-width: 1140px;
+  @media (min-width: 1124px) {
+    max-width: 1124px;
+  }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  .noData {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .link {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-top: 1.5rem;
+      background-color: #097066;
+      transition-duration: 200ms;
+      color: #ffffff;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      border-radius: 0.125rem;
+      border-width: 2px;
+      border-color: transparent;
+      border-style: solid;
+      &:hover {
+        border-color: #097066;
+        background-color: #fff;
+        color: #097066;
+      }
+    }
+  }
+  .data {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .link {
+      display: flex;
+      padding: 2rem;
+      background-color: #e0f2fe;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .img {
+      width: auto;
+      height: 6rem;
+    }
+
+    .jobType {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      margin-top: 1.5rem;
+      background-color: #075985;
+      color: #ffffff;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .jobName {
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+      color: #075985;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      text-align: center;
+    }
+  }
+}
